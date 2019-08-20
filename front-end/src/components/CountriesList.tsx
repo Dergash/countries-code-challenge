@@ -24,7 +24,6 @@ export const CountriesList: FunctionComponent<CountriesListProps> = (props) => {
     const {loading, error, data} = useQuery<CountriesResponse>(fetchCountries)
     const countries = data && data.countries
     return <div>
-        For requesting GraphQL API and rendering the list.
         { loading &&
             <span>loading</span>
         }
