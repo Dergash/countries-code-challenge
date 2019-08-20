@@ -20,7 +20,7 @@ const TRow = styled.tr`
 `;
 
 export interface TableProps<DataItem> {
-    columns: Array<{ title: string, key: keyof DataItem }>
+    columns: Array<{ title?: string, key: keyof DataItem }>
     items: DataItem[],
     placeholder?: string
 }

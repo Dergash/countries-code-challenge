@@ -10,32 +10,45 @@ interface CountriesListProps extends Partial<RouteComponentProps> {
 
 }
 
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+`
+
 const List = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px;
     padding: 0px 8px 0px 8px;
+    align-self: flex-start;
+
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
     }
 `
 
+const Spinner = styled.span`
+    font-size: 22px;
+`
+
 export const CountriesList: FunctionComponent<CountriesListProps> = (props) => {
     const {loading, error, data} = useQuery<CountriesResponse>(fetchCountries)
     const countries = data && data.countries
-    return <div>
+    return <Container>
         { loading &&
-            <span>loading</span>
+            <Spinner>Fetching countries...</Spinner>
         }
         { error &&
             <span>{error}</span>
         }
         { !loading && !error && countries &&
             <List>
-                {countries.map((item, index) => <CountryCard key={index} country={item} />)}
+                {countries.map(item => <CountryCard key={item.code} country={item} />)}
             </List>
         }
-    </div>
+    </Container>
 }
 
 export default React.memo(CountriesList);

@@ -1,4 +1,5 @@
 import React, {FunctionComponent} from 'react'
+import {Link} from 'react-router-dom';
 import {CountryRecord, LanguageRecord} from '../interfaces/countries'
 import styled from 'styled-components'
 import Table from './Table'
@@ -7,9 +8,14 @@ interface CountryCardProps {
     country: CountryRecord
 }
 
-const Card = styled.div`
+const Card = styled(Link)`
     background-color: rgb(15, 32, 45);
     padding: 16px;
+    color: inherit;
+
+    &:hover {
+        background-color: rgb(20, 37, 50);
+    }
 `;
 
 const Fields = styled.div`
@@ -40,7 +46,7 @@ const columns: Array<{ title: string, key: keyof LanguageRecord }> = [
 ]
 
 export const CountryCard: FunctionComponent<CountryCardProps> = (props) => {
-    return <Card>
+    return <Card to={`/countries/${props.country.code}`}>
         <Fields>
             <Header>
                 <Title>{props.country.name} / {props.country.native}</Title>

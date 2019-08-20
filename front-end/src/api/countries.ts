@@ -6,6 +6,7 @@ export const fetchCountries = gql`
         name
         native
         currency
+        code
         languages {
             code
             name
@@ -14,4 +15,14 @@ export const fetchCountries = gql`
         continent { name }
     }
 }
+`
+export const fetchCountry = gql`
+    query Country($countryCode: String!) {
+        country(code: $countryCode) {
+            name
+            code
+            currency
+            phone
+        }
+    }
 `
