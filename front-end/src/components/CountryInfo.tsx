@@ -22,6 +22,12 @@ const Fields = styled.div`
     background-color: rgb(15, 32, 45);
     padding: 16px;
     min-width: 500px;
+
+    @media (max-width: 768px) {
+        min-width: auto;
+        width: 100%;
+        margin: 8px;
+    }
 `
 
 const Field = styled.span`
