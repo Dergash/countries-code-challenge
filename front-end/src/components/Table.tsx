@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { placeholder } from '@babel/types';
 
 const TableContainer = styled.div`
     text-align: center;
@@ -54,4 +53,9 @@ export const Table = <DataItem, >(props: TableProps<DataItem>) => {
     </TableContainer>
 }
 
-export default React.memo(Table);
+/**
+ * Explicit type casting due to React.memo erasing generics info
+ *
+ * @see https://github.com/DefinitelyTyped/DefinitelyTyped/issues/37087
+ */
+export default React.memo(Table) as <DataItem, >(props: TableProps<DataItem>) => React.ReactElement;

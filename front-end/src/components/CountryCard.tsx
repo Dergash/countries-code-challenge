@@ -46,7 +46,11 @@ export const CountryCard: FunctionComponent<CountryCardProps> = (props) => {
                 <Title>{props.country.name} / {props.country.native}</Title>
                 <Continent>{props.country.continent.name}</Continent>
             </Header>
-            <Table columns={columns} items={props.country.languages} />
+            <Table
+                columns={columns}
+                items={props.country.languages}
+                placeholder="No languages"
+            />
         </Fields>
     </Card>
 }
