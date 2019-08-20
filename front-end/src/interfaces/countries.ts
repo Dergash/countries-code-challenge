@@ -22,12 +22,16 @@ export interface CountriesResponse extends GraphQLRecord {
  * @param native Native country name
  * @param currency Currency code as per ISO 4217 (https://www.iso.org/iso-4217-currency-codes.html)
  * @param languages Languages used in a country
+ * @param continent Continent where country is located
  */
 export interface CountryRecord extends GraphQLRecord {
     name: string,
     native: string,
     currency: string,
     languages: LanguageRecord[]
+    continent: {
+        name: string
+    }
 }
 
 /**

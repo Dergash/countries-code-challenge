@@ -11,6 +11,7 @@ export const fetchCountries = gql`
             name
             native
         }
+        continent { name }
     }
 }
 `
