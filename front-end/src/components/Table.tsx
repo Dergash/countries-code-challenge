@@ -54,4 +54,4 @@ export const Table = <DataItem, >(props: TableProps<DataItem>) => {
     </TableContainer>
 }
 
-export default Table;
+export default React.memo(Table);

@@ -6,4 +6,4 @@ export const HomePage: FunctionComponent = (props) => {
     </div>
 }
 
-export default HomePage;
+export default React.memo(HomePage);

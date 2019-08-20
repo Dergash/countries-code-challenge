@@ -11,4 +11,4 @@ export const CountryInfo: FunctionComponent<CountryInfoProps> = (props) => {
     </div>
 }
 
-export default CountryInfo;
+export default React.memo(CountryInfo);

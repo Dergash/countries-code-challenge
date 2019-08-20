@@ -23,4 +23,4 @@ export const AppBar: FunctionComponent<AppBarProps> = (props) => {
     </nav>
 }
 
-export default withRouter(AppBar);
+export default React.memo(withRouter(AppBar));

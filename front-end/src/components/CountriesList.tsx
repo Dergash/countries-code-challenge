@@ -25,7 +25,6 @@ export const CountriesList: FunctionComponent<CountriesListProps> = (props) => {
     const countries = data && data.countries
     return <div>
         For requesting GraphQL API and rendering the list.
-        Design is totally by me :)
         { loading &&
             <span>loading</span>
         }
@@ -40,4 +39,4 @@ export const CountriesList: FunctionComponent<CountriesListProps> = (props) => {
     </div>
 }
 
-export default CountriesList;
+export default React.memo(CountriesList);

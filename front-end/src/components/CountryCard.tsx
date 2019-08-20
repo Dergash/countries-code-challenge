@@ -51,4 +51,4 @@ export const CountryCard: FunctionComponent<CountryCardProps> = (props) => {
     </Card>
 }
 
-export default CountryCard
+export default React.memo(CountryCard);
