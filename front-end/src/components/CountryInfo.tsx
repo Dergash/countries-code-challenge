@@ -13,7 +13,6 @@ interface CountryInfoProps extends Partial<RouteComponentProps<{ code: string }>
 const Container = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 16px;
     height: 100%;
     align-items: center;
 `
@@ -23,6 +22,7 @@ const Fields = styled.div`
     flex-direction: column;
     background-color: rgb(15, 32, 45);
     padding: 16px;
+    margin-top: 16px;
     min-width: 500px;
     align-self: flex-start;
 

@@ -9,20 +9,25 @@ import CountryInfo from './components/CountryInfo';
 import styled from 'styled-components'
 
 const AppLayout = styled.div`
-    position: absolute;
-    top: 48px;
-    width: 100%;
+    display: grid;
     height: 100%;
+    grid-template-rows: 50px 1fr;
+`
+
+const AppContent = styled.div`
+    overflow: auto;
 `
 
 function App() {
     return <ApolloProvider client={apolloClient}>
         <BrowserRouter>
-            <AppBar />
             <AppLayout>
-                <Route path="/" exact component={HomePage} />
-                <Route path="/countries/" exact component={CountriesList} />
-                <Route path="/countries/:code" component={CountryInfo} />
+                <AppBar />
+                <AppContent>
+                    <Route path="/" exact component={HomePage} />
+                    <Route path="/countries/" exact component={CountriesList} />
+                    <Route path="/countries/:code" component={CountryInfo} />
+                </AppContent>
             </AppLayout>
         </BrowserRouter>
     </ApolloProvider>
