@@ -14,6 +14,8 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 16px;
+    height: 100%;
+    align-items: center;
 `
 
 const Fields = styled.div`
@@ -22,6 +24,7 @@ const Fields = styled.div`
     background-color: rgb(15, 32, 45);
     padding: 16px;
     min-width: 500px;
+    align-self: flex-start;
 
     @media (max-width: 768px) {
         min-width: auto;
