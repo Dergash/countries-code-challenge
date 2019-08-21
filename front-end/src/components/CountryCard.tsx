@@ -12,6 +12,7 @@ const Card = styled(Link)`
     background-color: rgb(15, 32, 45);
     padding: 16px;
     color: inherit;
+    text-decoration: none;
 
     &:hover {
         background-color: rgb(20, 37, 50);
