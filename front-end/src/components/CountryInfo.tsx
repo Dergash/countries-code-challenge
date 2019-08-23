@@ -1,10 +1,9 @@
 import React, {FunctionComponent} from 'react';
 import {RouteComponentProps} from 'react-router';
-import {CountryResponse, CountryRecord} from '../interfaces/countries'
+import {CountryResponse} from '../interfaces/countries'
 import {fetchCountry} from '../api/countries'
 import {useQuery} from '@apollo/react-hooks'
 import styled from 'styled-components'
-import Table from './Table'
 
 interface CountryInfoProps extends Partial<RouteComponentProps<{ code: string }>> {
 

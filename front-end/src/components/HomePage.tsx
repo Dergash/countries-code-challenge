@@ -8,6 +8,7 @@ const Container = styled.div`
     height: 100%;
     align-items: center;
     font-size: 22px;
+    text-align: center;
 `
 
 export const HomePage: FunctionComponent = (props) => {
