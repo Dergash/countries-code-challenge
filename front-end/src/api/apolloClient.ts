@@ -4,6 +4,10 @@ import {HttpLink} from 'apollo-link-http';
 import {onError} from 'apollo-link-error';
 import {InMemoryCache} from 'apollo-cache-inmemory';
 
+const __API__ = process.env.REACT_APP_API
+    ? process.env.REACT_APP_API
+    : 'https://countries.trevorblades.com/graphql'
+
 const client = new ApolloClient({
     link: ApolloLink.from([
         onError(({ graphQLErrors, networkError }) => {
@@ -18,7 +22,7 @@ const client = new ApolloClient({
                 }
           }),
           new HttpLink({
-            uri: 'https://countries.trevorblades.com/graphql',
+            uri: __API__,
             credentials: 'same-origin'
           })
     ]),

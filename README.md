@@ -1,5 +1,20 @@
 # [Live Demo](https://dergash.github.io/)
 
+## Launch with https://countries.trevorblades.com endpoint:
+```sh
+yarn start
+```
+
+## Launch with local backend:
+Back-end:
+```sh
+yarn start
+```
+Front-end:
+```sh
+yarn start:local-backend
+```
+
 # Code Challenge for Scoutbase
 
 If you’re reading this, then you’ve applied for a position at Scoutbase.

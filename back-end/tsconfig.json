@@ -3,7 +3,8 @@
     "target": "esnext",
     "module": "commonJS",
     "outDir": "./dist",
-    "strict": true
+    "strict": true,
+    "resolveJsonModule": true
   },
   "include": [
       "./src/**/*"
