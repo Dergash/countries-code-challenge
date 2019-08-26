@@ -71,6 +71,9 @@ export const AppBar: FunctionComponent<AppBarProps> = (props) => {
                     Countries List
                 </RouteButton>
             </Item>
+            <RouteButton to={`/users`}>
+                Users
+            </RouteButton>
         </List>
         <Title>Countries Code Challenge</Title>
     </Container>

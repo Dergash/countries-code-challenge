@@ -1,5 +1,6 @@
 import React, {FunctionComponent} from 'react';
 import styled from 'styled-components';
+import Login from './Login'
 
 const Container = styled.div`
     display: flex;

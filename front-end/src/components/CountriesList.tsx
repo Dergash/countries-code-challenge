@@ -1,10 +1,11 @@
 import React, {FunctionComponent} from 'react';
 import {RouteComponentProps} from 'react-router';
-import {useQuery} from '@apollo/react-hooks'
-import {fetchCountries} from '../api/countries'
+import {useQuery} from '@apollo/react-hooks';
+import {fetchCountries} from '../api/countries';
 import {CountriesResponse} from '../interfaces/countries'
 import CountryCard from './CountryCard';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Button from './Button';
 
 interface CountriesListProps extends Partial<RouteComponentProps> {
 
@@ -40,21 +41,6 @@ const PaginationControls = styled.div`
     margin-top: 16px;
     margin-right: 8px;
     align-self: flex-end;
-`
-
-const Button = styled.button`
-    border: none;
-    background-color: ${props => !props.disabled ? 'rgb(15, 32, 45)' : 'rgb(30,40,50)'};
-    color: rgba(255, 255, 255, 0.4);
-    &:hover {
-        background-color: ${props => !props.disabled ? 'rgb(20, 37, 50)' : 'rgb(30,40,50)'};
-    }
-    outline: none;
-    height: 40px;
-    margin-left: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    cursor: ${props => !props.disabled ? 'pointer' : 'default'};
 `
 
 const Spinner = styled.span`

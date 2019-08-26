@@ -7,6 +7,7 @@ import HomePage from './components/HomePage';
 import CountriesList from './components/CountriesList';
 import CountryInfo from './components/CountryInfo';
 import styled from 'styled-components'
+import Login from './components/Login'
 
 const AppLayout = styled.div`
     display: grid;
@@ -27,6 +28,7 @@ function App() {
                     <Route path="/" exact component={HomePage} />
                     <Route path="/countries/" exact component={CountriesList} />
                     <Route path="/countries/:code" component={CountryInfo} />
+                    <Route path="/users" component={Login} />
                 </AppContent>
             </AppLayout>
         </BrowserRouter>
